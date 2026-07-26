@@ -1,0 +1,8 @@
+[package]
+name = "plaza-os"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+plaza-foundation = { version = "0.1.0-dp1", path = "../../shared/plaza-foundation" }
+serde = { workspace = true, features = ["derive"] }
