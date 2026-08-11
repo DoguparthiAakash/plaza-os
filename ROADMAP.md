@@ -1,3 +1,7 @@
-# plaza-os - ROADMAP.md
+# Roadmap
 
-Placeholder for ROADMAP.md.
+## Phase 1
+- Initial release
+
+## Phase 2
+- Enhancements
