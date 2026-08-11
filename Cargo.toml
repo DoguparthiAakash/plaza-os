@@ -6,3 +6,80 @@ edition = "2021"
 [dependencies]
 plaza-foundation = { version = "0.1.0-dp1", path = "../../shared/plaza-foundation" }
 serde = { workspace = true, features = ["derive"] }
+
+[workspace]
+members = ["."]
+
+[workspace.package]
+version = "0.1.0-alpha.1"
+edition = "2021"
+authors = ["PlazaVM Contributors"]
+license = "MIT"
+description = "PlazaVM Component"
+repository = "https://github.com/PlazaVM/PlazaVM"
+
+[workspace.dependencies]
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+serde_yaml = "0.9"
+toml = "0.8"
+
+# Async runtime
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "sync", "time", "fs", "io-util", "process", "net", "signal"] }
+async-trait = "0.1"
+tokio-util = { version = "0.7", features = ["rt"] }
+bollard = "0.18"
+
+# Error handling
+thiserror = "2"
+anyhow = "1"
+
+# IDs and time
+uuid = { version = "1", features = ["v4", "serde"] }
+chrono = { version = "0.4", features = ["serde"] }
+
+# Database
+rusqlite = { version = "0.31", features = ["bundled"] }
+
+# Logging / tracing
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "json"] }
+
+# System info and directories
+sysinfo = "0.33"
+lazy_static = "1.4"
+dirs = "6"
+zip = "2"
+
+# Semver
+semver = { version = "1", features = ["serde"] }
+
+# CLI
+clap = { version = "4", features = ["derive"] }
+
+# Tauri
+tauri = { version = "2", features = [] }
+tauri-build = "2"
+
+# Cross-crate references
+plaza-core = { version = "0.1.0-alpha.1" }
+plaza-events = { version = "0.1.0-alpha.1" }
+plaza-config = { version = "0.1.0-alpha.1" }
+plaza-storage = { version = "0.1.0-alpha.1" }
+plaza-monitor = { version = "0.1.0-alpha.1" }
+plaza-registry = { version = "0.1.0-alpha.1" }
+plaza-platform = { version = "0.1.0-alpha.1" }
+plaza-workspace = { version = "0.1.0-alpha.1" }
+plaza-controller = { version = "0.1.0-alpha.1" }
+plaza-decision = { version = "0.1.0-alpha.1" }
+plaza-resource = { version = "0.1.0-alpha.1" }
+plaza-ai = { version = "0.1.0-alpha.1" }
+plaza-runtime = { version = "0.1.0-alpha.1" }
+plaza-plugin = { version = "0.1.0-alpha.1" }
+plaza-api = { version = "0.1.0-alpha.1" }
+plaza-foundation = { version = "0.1.0-alpha.1" }
+plaza-command = { version = "0.1.0-alpha.1" }
+
+
+
